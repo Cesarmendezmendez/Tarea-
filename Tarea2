@@ -1,0 +1,135 @@
+!pip install --target=$nb_path nacal
+from nacal import *
+     
+Requirement already satisfied: nacal in /usr/local/lib/python3.10/dist-packages (0.1.30)
+Requirement already satisfied: sympy>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from nacal) (1.12)
+Requirement already satisfied: mpmath>=0.19 in /usr/local/lib/python3.10/dist-packages (from sympy>=1.1.0->nacal) (1.3.0)
+ejercicio 4
+
+\bigl(
+ 
+\bigr) + \bigl(
+ 
+\bigr) \bigl(
+ 
+\bigr) \bigl(
+ 
+\bigr)
+
+
+b = Vector( [0,9,7] )
+print("(a)")
+display(latex(latex(3*b|1)))
+print("(b)")
+display(latex(latex(3*1|b)))
+print("(c)")
+display(latex(latex(1*3|b)))
+print("(d)")
+display(latex(latex(1|b*3)))
+     
+(a)
+'0'
+(b)
+'7'
+(c)
+'7'
+(d)
+'0'
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+from nacal import *
+from IPython.display import display, Math, Latex
+
+d = Vector( [6, 5, 7, 3, 8] )
+e = Vector( [1, 2, 3, 4, 9] )
+f = Vector( [9, 10, 14, 12, 15] )
+b = Matrix([d, e, f])
+a = Matrix([f, e, d])
+c = Matrix([e, f, d])
+display(Latex(latex(b)))
+display(Latex(latex(a)))
+     
+\left[
+ 
+\right]
+\left[
+ 
+\right]
+
+display(Latex(latex(a+b)))
+display(Latex(latex(b+a)))
+     
+\left[
+ 
+\right]
+\left[
+ 
+\right]
+
+display(Latex(latex(a+(b+c))))
+display(Latex(latex((a+b)+c)))
+     
+\left[
+ 
+\right]
+\left[
+ 
+\right]
+
+display(Latex(latex(0+(1|a|1))))
+display(Latex(latex(1|a|1)))
+     
+9
+9
+
+display(Latex(latex(a+(-a))))
+     
+\left[
+ 
+\right]
+
+display(Latex(latex(3*(a+b))))
+display(Latex(latex((3*a)+(3*b))))
+     
+\left[
+ 
+\right]
+\left[
+ 
+\right]
+
+display(Latex(latex((3+2)*a)))
+display(Latex(latex((3*a)+(2*a))))
+     
+\left[
+ 
+\right]
+\left[
+ 
+\right]
+
+display(Latex(latex(3*(2*a))))
+display(Latex(latex((2*3)*a)))
+     
+\left[
+ 
+\right]
+\left[
+ 
+\right]
+
+display(Latex(latex(a)))
+display(Latex(latex(1*a)))
+     
+\left[
+ 
+\right]
+\left[
+ 
+\right]
